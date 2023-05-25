@@ -1,0 +1,23 @@
+class UberPrice {
+  constructor(baseFare, costPerKilometer, costPerMinute) {
+    this.baseFare = baseFare;
+    this.costPerKilometer = costPerKilometer;
+    this.costPerMinute = costPerMinute;
+  }
+
+  calculatePrice(distanceInKilometers, durationInMinutes) {
+    const distanceCost = this.costPerKilometer * distanceInKilometers;
+    const durationCost = this.costPerMinute * durationInMinutes;
+
+    const totalPrice = this.baseFare + distanceCost + durationCost;
+    return totalPrice.toFixed(2); 
+  }
+}
+
+
+const calculator = new UberPrice(5, 10, 15);
+const distance = 10; 
+const duration = 20; 
+const price = calculator.calculatePrice(distance, duration);
+
+console.log(`The estimated price for the ride is $${price}`);

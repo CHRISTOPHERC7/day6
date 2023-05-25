@@ -1,0 +1,45 @@
+class Person {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+   
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  getAge() {
+    return this.age;
+  }
+
+ 
+  
+
+  setFirstName(firstName) {
+    this.firstName = firstName;
+  }
+
+  setLastName(lastName) {
+    this.lastName = lastName;
+  }
+
+  setAge(age) {
+    this.age = age;
+  }
+
+  
+}
+
+
+const person1 = new Person("John", "Doe", 25);
+console.log(person1.getFullName()); 
+console.log(person1.getAge()); 
+
+
+person1.setAge(26);
+console.log(person1.getAge());
+
+person1.setLastName("chris");
+console.log(person1.getFullName());

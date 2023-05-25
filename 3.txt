@@ -1,0 +1,18 @@
+class circle{
+constructor (radius,colour){
+  this.radius=radius;
+  this.colour=colour;
+}
+getarea(){
+  return math.pi*math.pow(this.radius*2);
+  
+}
+getcirucumferance(){
+  return 2*math.pi*this.radius;
+}
+
+const mycircle=new circle(5);
+console.log("area:",mycircle.getarea());
+console.log("circumferance:",mycircle.getcircumferance());
+
+}
